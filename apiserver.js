@@ -6,17 +6,19 @@ const port = 8080;
 
 console.log(`${moment().format()}`);
 
-function onGetRoot() {
+function onGetRoot(a, b) {
   const res = {
     msg: "Hello World",
-    time: moment().format()
+    sum: a + b
+    // time: moment().format()
   };
   return res;
 }
 
 app.get("/", (req, res) => {
   console.log(`get /`);
-  res.json(onGetRoot());
+  res.json(onGetRoot(Number(req.query.a), Number(req.query.b)));
+  console.log(`a=${req.query.a}, b=${req.query.b}, c=${req.query.c}`);
 });
 
 app.get("/hoge", (req, res) => {
@@ -29,3 +31,5 @@ app.get("/hoge", (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+module.exports = onGetRoot;
