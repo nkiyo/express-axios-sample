@@ -13,5 +13,8 @@
   },
   "scripts": {
     "unit": "NODE_ENV=test jest"
+  },
+  "devDependencies": {
+    "eslint-plugin-jest": "^22.17.0"
   }
 }

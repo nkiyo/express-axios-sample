@@ -3,12 +3,14 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "jest": true
+        "jest/globals": true
     },
+    "plugins":["jest"],
     "extends": [
         "eslint:recommended",
         "airbnb-base",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:jest/recommended"
     ],
     "globals": {
         "Atomics": "readonly",

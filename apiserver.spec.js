@@ -1,5 +1,5 @@
 const onGetRoot = require("./apiserver");
 
 test("test onGetRoot", () => {
-  expect(onGetRoot()).toBe({ msg: "Hello World" });
+  expect(onGetRoot(1, 2)).toEqual({ msg: "Hello World", sum: 3 });
 });
